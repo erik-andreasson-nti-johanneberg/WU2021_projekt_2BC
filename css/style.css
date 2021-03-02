@@ -1,0 +1,15 @@
+/* Nedan är alla wrappers och deras grid inställningar */
+
+.home_grid {
+    display: grid;
+    grid-template-areas: 
+    'he'
+    's1'
+    'n1' /* Nyheter i olika kategorier på hemsidan */ 
+    'b1' /* Bilder från verksamheten på hemsidan */
+    'fo';
+    grid-template-rows: 15% 25% 25% 25% 10%;
+    grid-template-columns: 100%;
+    height: 100vh;
+
+}
