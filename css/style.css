@@ -38,7 +38,7 @@
         'he'
         'n2'/* Nyheter av olika kategorier typ 2 samt Knappar för olika flikar/kategorier av nyheter */
         'fo'; 
-        grid-template-rows: 15% 10% 65% 10%;
+        grid-template-rows: 15% 75% 10%;
         grid-template-columns: 100%;
         height: 100vh;
         gap: 5px;
@@ -87,6 +87,7 @@
 /* CSS styling för index.html mobil version */
 
     .box_2 {
+        grid-area: n1;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 20% 80%;
@@ -102,10 +103,34 @@
     }
 
     .box_3 {
+        grid-area: b1;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         background-color: forestgreen;
+    }
+
+/* CSS styling för about.html mobil version */
+
+    .box_2_scroll {
+        grid-area: a1;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+        overflow-x: scroll;
+        background-color: fuchsia;
+    }
+
+/* CSS styling för news.html mobil version */
+
+    .news_body {
+        grid-area: n2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% repeat(17%, 5);
+        gap: 5px;
+        overflow-y: scroll;
+        background-color: grey;
     }
 
 }
