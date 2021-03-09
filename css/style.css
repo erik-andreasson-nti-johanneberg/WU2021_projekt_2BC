@@ -1,15 +1,111 @@
-/* Nedan är alla wrappers och deras grid inställningar */
 
-.home_grid {
-    display: grid;
-    grid-template-areas: 
-    'he'
-    's1'
-    'n1' /* Nyheter i olika kategorier på hemsidan */ 
-    'b1' /* Bilder från verksamheten på hemsidan */
-    'fo';
-    grid-template-rows: 15% 25% 25% 25% 10%;
-    grid-template-columns: 100%;
-    height: 100vh;
+
+@media screen and (max-width: 768px) {
+
+/* Nedan är alla wrappers och deras grid inställningar i mobil format */
+
+    .wrapper_home {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        's1'
+        'n1' /* Nyheter i olika kategorier på hemsidan */ 
+        'b1' /* Bilder från verksamheten på hemsidan */
+        'fo';
+        grid-template-rows: 15% 25% 25% 25% 10%;
+        grid-template-columns: 100%;
+        height: 100vh;
+        gap: 5px;
+    
+    }
+    
+    .wrapper_about {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        's1'
+        'a1' /* Information om verksamheten */
+        'fo';
+        grid-template-rows: 15% 25% 50% 10%;
+        grid-template-columns: 100%;
+        height: 100vh;
+        gap: 5px;
+    }
+    
+    .wrapper_news {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        'n2'/* Nyheter av olika kategorier typ 2 samt Knappar för olika flikar/kategorier av nyheter */
+        'fo'; 
+        grid-template-rows: 15% 10% 65% 10%;
+        grid-template-columns: 100%;
+        height: 100vh;
+        gap: 5px;
+    }
+    
+    .wrapper_schedule {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        'l1'/* Navigations knappar för olika dagar och veckor */
+        'o1'
+        'fo'
+        ;
+        grid-template-rows: 15% 15% 60% 10%;
+        grid-template-columns: 100%;
+        height: 100vh;
+        gap: 5px;
+    }
+
+/* allmän styling som gäller alla sidor mobil */
+
+    .header {
+        grid-area: he;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: blue;
+    }
+
+    .box_1 {
+        grid-area: s1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: crimson;
+    }
+
+    .footer {
+        grid-area: fo;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: darkgoldenrod;
+    }
+
+/* CSS styling för index.html mobil version */
+
+    .box_2 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        gap: 5px;
+        background-color: darkturquoise;
+    }
+
+    .box_2 nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: darkmagenta;
+    }
+
+    .box_3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: forestgreen;
+    }
 
 }
