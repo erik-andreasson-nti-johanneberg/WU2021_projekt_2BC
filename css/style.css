@@ -3,6 +3,7 @@
 
 .menubutton {
     display: none;
+    cursor: pointer;
 }
 
 
@@ -18,6 +19,8 @@ nav {
     display: flex;
     flex-direction: row;
     margin: 0px;
+    width: 550px;
+    height: 100px;
 }
 
 .logo-h img {
@@ -72,6 +75,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-around;
     background-color: #0900AD;
+    align-items: center;
 }
 
 /* Nedan är alla wrappers och deras grid inställningar i desktop format */
@@ -160,6 +164,15 @@ a:hover {
     
 /* Hamburgermeny mobil */
 
+    .links {
+        display: none;
+    }
+
+    .menubutton {
+        display: inline;
+        cursor: pointer;
+    }
+
     .menubutton .menu {
         display: none;
     }
@@ -180,6 +193,19 @@ a:hover {
     }
 
 /* Nedan är alla wrappers och deras grid inställningar i mobil format */
+
+    .wrapper_login {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        'l1'
+        'fo';
+        grid-template-columns: 100%;
+        grid-template-rows: 13% 77% 10%;
+        gap: 5px;
+        height: 135vh;
+        width: 93.37vw;
+    }
 
     .wrapper_home {
         display: grid;
@@ -235,6 +261,12 @@ a:hover {
     }
 
 /* allmän styling som gäller alla sidor mobil */
+
+    .centerimg {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
 
     h3 {
         color: #FAD207;
@@ -340,6 +372,107 @@ a:hover {
         flex-direction: row;
         justify-content: space-around;
         background-color: cornflowerblue;
+    }
+
+    /* CSS styling för login.html */
+
+    #prompt_text {
+        height: 100px;
+    }
+
+    #prompt_text h2 {
+        text-align: center;
+    }
+
+    #prompt_text img {
+        max-height: 100%;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Login CSS för möbil */
+
+    .login_form {
+        
+    }
+
+    .reg_log_container h2 {
+        color: #FAD207;
+    }
+
+    .reg_log_container p {
+        color: #FAD207;
+    }
+
+    .reg_log_container label {
+        color: #FAD207;
+    }
+
+    .reg_log_container {
+        grid-area: l1;
+        background-color: #0900AD;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+    }
+  
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 95%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+  
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    /* Overwrite default styles of hr */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+    
+    /* Set a style for the submit/register button */
+    .loginbtn {
+        background-color: #FAD207;
+        color: black;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    .loginbtn:hover {
+        opacity:1;
+    }
+    
+    /* Add a blue text color to links */
+    a {
+        color: dodgerblue;
+    }
+    
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
     }
 
 }

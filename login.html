@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Göteborgs Skyttesportsförening - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="wrapper_login">
+    <header class="header">
+        <div class="logo-h">
+            <img src="img/scp_transparent_logo.png" alt="">
+            <h3>Göteborgs <br> Skyttesportsförening</h3>
+            <i class="material-icons">menu</i>
+        </div>
+        <nav class="links">
+            <a class="desk_link" href="index.html">Hem</a>
+            <a class="desk_link" href="about.html">Föreningen</a>
+            <a class="desk_link" href="news.html">Nyheter</a>
+            <a class="desk_link" href="schedule.html">Schema</a>
+        </nav>
+        <div class="menubutton">
+            <nav class="menu">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Föreningen</a>
+                <a href="news.html">Nyheter</a>
+                <a href="schedule.html">Schema</a>
+            </nav>
+        </div>
+    </header>
+    <div class="reg_log_container">
+        <div id="prompt_text">
+            <img class="centerimg" src="img/scp_transparent_logo.png" alt="">
+            <h2>To view your results, statistics, and schedule login or create an account below.</h2>
+        </div>
+        <form action="action_page.php" class="login_form">
+            <div class="container">
+                <h2>Login to your account</h2>
+                <p>Please fill in your login information</p>
+                <hr>
+    
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+    
+                <button type="submit" class="loginbtn">login</button>    
+            </div>
+        </form>
+    </div>
+            
+    <footer class="footer">
+        <p>EZ CLAPS</p>
+        <a href="login.html">Top of the page</a>
+        <p>EZ CLAPS</p>
+    </footer>      
+    <script src="js/main.js"></script>
+</body>
+</html>
