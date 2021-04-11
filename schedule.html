@@ -5,38 +5,256 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Göteborgs Skyttesportsförening - Schedule</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_minify.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body class="wrapper_schedule">
     <header class="header">
-        <img src="img/scp_transparent_logo.png" alt="">
-        <div>
-            <h1>
-
-            </h1>
+        <div class="img_title">
+            <img id="logo_schedule" src="img/logo_done_crop.jpg" alt="föreningens logga">
+            <h2 id="title_schedule">Göteborgs <br> Skyttesportsförening</h2>
         </div>
-        <nav>
-
-        </nav>
+        <div id="desk_links">
+            <a href="index.html">Hem</a>
+            <a href="about.html">Om oss</a>
+            <a href="news.html">Nyheter</a>
+            <a href="schedule.html">Schema</a>
+            <a href="login.html">Profil</a>
+        </div>
+        <div id="dropdown_n">
+            <div id="dropbtn_n">
+                <i class="material-icons">menu</i>
+            </div>
+            <div id="dropdown-content_n">
+                <a href="index.html">Hem</a>
+                <a href="about.html">Om oss</a>
+                <a href="news.html">Nyheter</a>
+                <a href="schedule.html">Schema</a>
+                <a href="login.html">Profil</a>
+            </div>
+        </div>
     </header>
-    <section class="schedule">
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+    <section class="box_1">
         <div>
-            <p></p>
+            <h2>
+                Vi erbjuder träningar och tävlingar för alla grenar under hela veckan
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, sint nobis omnis saepe, incidunt cupiditate sunt, ipsam maiores aut molestiae inventore cumque iusto tenetur qui possimus officia commodi minus perspiciatis in dignissimos consequuntur voluptas odit voluptatibus alias? Voluptates eum, asperiores ipsa sit ea est dolore.
+            </p>
         </div>
     </section>
+    <table id="time_table_desktop">
+        <tr>
+            <td>
+                <h2>Träningar och tävlingar för föreningen</h2>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <img id="table_img" src="img/bild_pa_pistol.jpg" alt="bild på pistol med patroner">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Tid</b>
+            </td>
+            <td>
+                <b>Måndag</b>
+            </td>
+            <td>
+                <b>Tisdag</b>
+            </td>
+            <td>
+                <b>Onsdag</b>
+            </td>
+            <td>
+                <b>Torsdag</b>
+            </td>
+            <td>
+                <b>Fredag</b>
+            </td>
+            <td>
+                <b>Lördag</b>
+            </td>
+            <td>
+                <b>Söndag</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>15:00 - 17:00</b><br>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b>Veckans 10m sittande <br> tävling hos föreningen</b>
+            </td>
+            <td>
+                <b>Veckans 50m ligg <br> tävling hos föreningen</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>17:00 - 18:30</b><br>
+            </td>
+            <td>
+                <b>10m Pistol Träning</b>
+            </td>
+            <td>
+                <b>10m stå träning</b>
+            </td>
+            <td>
+                <b>50m ligg träning</b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b>Veckans 10m stå <br> tävling hos föreningen</b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>18:30 - 20:00</b><br>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b>50m .22 kaliber <br> träning</b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b>50m .22 kaliber <br> knä träning</b>
+            </td>
+            <td>
+                <b>10m sittande träning</b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+            <td>
+                <b></b>
+            </td>
+        </tr>
+    </table>
+    <div id="time_table_mobile">
+        <nav id="dagar">
+            <p id="manBtn">Måndag</p>
+            <p id="tisBtn">Tisdag</p>
+            <p id="onsBtn">Onsdag</p>
+            <p id="torBtn">Torsdag</p>
+            <p id="freBtn">Fredag</p>
+            <p id="lörBtn">Lördag</p>
+            <p id="sönBtn">Söndag</p>
+        </nav>
+        <table id="mandag">
+            <tr>
+                <td>
+                    <b>Tid</b>
+                </td>
+                <td>
+                    <b>Händelse</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>17:00 - 18:30</b><br>
+                </td>
+                <td>
+                    <b>10m Pistol Träning</b>
+                </td>
+            </tr>
+        </table>
+        <table id="tisdag">
+            <tr>
+                <td>
+                    <b>Tid</b>
+                </td>
+                <td>
+                    <b></b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>17:00 - 18:30</b><br>
+                </td>
+                <td>
+                    <b>10m stå Träning</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>18:30 - 20:00</b>
+                </td>
+                <td>
+                    <b>50m .22 kaliber <br> träning</b>
+                </td>
+            </tr>
+        </table>
+        <table id="onsdag">
+            <tr>
+                <td>
+                    <b>Tid</b>
+                </td>
+                <td>
+                    <b></b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>17:00 - 18:30</b><br>
+                </td>
+                <td>
+                    <b>50m Ligg Träning</b>
+                </td>
+            </tr>
+        </table>
+    </div>
     <footer class="footer">
         <p></p>
-        <a href=""></a>
+        <a href="schedule.html">Toppen av sidan</a>
         <p></p>
-    </footer>
+    </footer>   
+    <script src="js/main.js"></script> 
+    <script src="js/test.js"></script>
 </body>
 </html>

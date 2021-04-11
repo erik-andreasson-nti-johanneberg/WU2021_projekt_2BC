@@ -1,36 +1,109 @@
 
+/* dropdown meny */
+
+#dropdown_h {
+    display: none;
+}
+
+#dropdown_a {
+    display: none;
+}
+
+#dropdown_n {
+    display: none;
+}
+
+#dropdown_l {
+    display: none;
+}
+
 /* Hamburgar meny */
 
-.menubutton {
-    display: none;
+.menu{
+    height: 100vh;
+    width: 80vw;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+.menu-button{
     cursor: pointer;
+    display: none;
+}
+
+.menu-button i.material-icons{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.show{
+    left: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
 }
 
 
 /* allmän styling som gäller alla sidor desktop */
 
+#empty_space {
+    width: 50px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-area: he;
+    background-color: #000a66;
+}
+
+.header .img_title img {
+    width: auto;
+    height: 90px;
+    padding: 8px;
+    padding-right: 20px;
+}
+
+.header .img_title {
+    display: flex;
+    justify-content: left;
+}
+
+.header #desk_links {
+    padding-right: 100px;
+    padding-left: 185px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    color: #FAD207;
+    margin: 10px;
+    padding: 0px;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.logo-h {
-    display: flex;
-    flex-direction: row;
-    margin: 0px;
-    width: 550px;
-    height: 100px;
-}
-
-.logo-h img {
-    height: auto;
-    width: auto;
-    padding-right: 10px;
-}
-
-.desk_link {
-
 }
 
 .menu {
@@ -41,6 +114,17 @@ nav {
 
 h3 {
     color: #FAD207;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    color: #FAD207;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color:#FAD207;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -53,20 +137,18 @@ a:hover {
     color: #FAD207;
 }
 
-.header {
-    grid-area: he;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #0900AD;
+p {
+    color: #FAD207;
+    font-family: Arial , Helvetica, sans-serif;
 }
+
 
 .box_1 {
     grid-area: s1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #0900AD;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+    background-color: #000a66;
 }
 
 .footer {
@@ -74,7 +156,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #0900AD;
+    background-color: #000a66;
     align-items: center;
 }
 
@@ -88,9 +170,8 @@ a:hover {
     'n1' /* Nyheter i olika kategorier på hemsidan */ 
     'b1' /* Bilder från verksamheten på hemsidan */
     'fo';
-    grid-template-rows: 15% 25% 25% 25% 10%;
+    grid-template-rows: 10% 15% 20% 45% 10%;
     grid-template-columns: 100%;
-    height: 95vh;
     gap: 5px;
 
 }
@@ -102,9 +183,9 @@ a:hover {
     's1'
     'a1' /* Information om verksamheten */
     'fo';
-    grid-template-rows: 15% 25% 50% 10%;
+    grid-template-rows: 12% 20% 63% 5%;
     grid-template-columns: 100%;
-    height: 100vh;
+    height: 120vh;
     gap: 5px;
 }
 
@@ -124,41 +205,433 @@ a:hover {
     display: grid;
     grid-template-areas: 
     'he'
+    's1'
     'o1' /* Schema för olika dagar och veckor */
     'fo'
     ;
-    grid-template-rows: 15% 75% 10%;
+    grid-template-rows: 15% 20% 55% 10%;
     grid-template-columns: 100%;
-    height: 100vh;
+    height: 96vh;
     gap: 5px;
+}
+
+.wrapper_login {
+    display: grid;
+    grid-template-areas: 
+    'he'
+    'l1'
+    'fo';
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%;
+    height: 165vh;
+    gap: 5px;
+}
+
+/* CSS för index.html desktop */
+
+/* Styling för notiser på index.html */
+    
+#res_button {
+    color: #FAD207;
+}
+
+#res_button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#resultat {
+    display: block;
+}
+
+#tav_button {
+    color: #FAD207;
+}
+
+#tav_button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tavlingar {
+    display: none;
+}
+
+#verk_button {
+    color: #FAD207;
+}
+
+#verk_button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#verksamhet {
+    display: none;
+}
+
+.box_1 div h2 {
+    text-align: center;
+}
+
+.box_1 div p {
+    text-align: center;
+    padding-left: 350px;
+    padding-right: 350px;
+    font-size: 17px;
+    color: white;
+}
+
+.box_2 {
+    grid-area: n1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: #000a66;
+}
+
+.box_2 nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #000a66;
+}
+
+.box_2 div h2 {
+    padding-left: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.box_3 {
+    grid-area: b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000a66;
+}
+
+.list_nav {
+    border-bottom: solid 5px #FAD207 ;
+    padding: 0px;
+}
+
+/* Scrollbar horisontellt */
+
+.box_3 h2 {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0px;
+}
+
+.scroll_wrapper {
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding: 0px;
+    margin: 10px;
+}
+
+.scroll_wrapper::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll_wrapper::-webkit-scrollbar-track {
+    background: #b8a237;
+}
+
+.scroll_wrapper::-webkit-scrollbar-thumb {
+    background:#FAD207;
+}
+
+.scroll_wrapper .item {
+    height: 395px;
+    line-height: 395px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.img-item {
+    width: auto;
+    height: 395px;
+}
+
+/* CSS för about.html */
+
+.box_2_scroll {
+    grid-area: a1;
+    display: grid;
+    grid-template-rows: repeat(12.5%, 8);
+    grid-template-columns: 100%;
+    overflow-y: scroll;
+    background-color: #000a66;
+}
+
+.box_2_scroll div img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box_2_scroll div {
+    border-bottom: solid 5px white;
+    border-top: solid 5px white;
+    padding: 40px;
+}
+
+.box_2_scroll div p{
+    text-align: center;
+    font-size: large;
+}
+
+/* CSS för news.html */
+
+.news_body {
+    grid-area: n2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% repeat(17%, 5);
+    gap: 5px;
+    overflow-y: scroll;
+    background-color: #000a66;
+}
+
+.news_body h2 {
+    text-align: center;
+}
+
+.news_img_wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(20%, 5);
+    gap: 5px;
+}
+
+.news_img_wrapper div img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news_body nav {
+    padding: 10px;
+}
+
+.news_img_wrapper div {
+    border-bottom: solid 5px white;
+    border-top: solid 5px white;
+    padding: 40px;
+}
+
+.news_img_wrapper div p {
+    font-size: large;
+    color: #FAD207;
+    text-align: center;
+}
+
+/* CSS för schedule.html */
+
+table {
+    background-color: #000a66;
+    padding: 25px;
+}
+
+#table_img {
+    width: auto;
+    height: 110px;
+}
+
+td {
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border-top: solid 5px white;
+    background-color: #000a66;
+    color: #FAD207;
+    
+}
+
+#time_table_mobile {
+    grid-area: o1;
+    display: none;
+}
+
+/* CSS för login.html */
+
+.wrapper_login .header {
+    grid-area: he;
+    padding: 10px;
+    background-color: #000a66;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+}
+
+#prompt_text {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#prompt_text h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#prompt_text h2 {
+    text-align: center;
+}
+
+#prompt_text img {
+    height: 300px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reg_log_container h2 {
+    color: #FAD207;
+}
+
+.reg_log_container p {
+    color: #FAD207;
+}
+
+.reg_log_container label {
+    color: #FAD207;
+}
+
+.reg_log_container {
+    grid-area: l1;
+    background-color: #000a66;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 95%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.loginbtn {
+    background-color: #FAD207;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.loginbtn:hover {
+    opacity:1;
+}
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
 
-    .img-item {
-        width: 90px;
-        height: 90px;
+    .header {
+        grid-area: he;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #000a66;
+    }
+    
+
+    /* Hamburgarmeny */
+
+    .menu-button {
+        display: none;
+    }
+
+    .menu-button i.material-icons {
+        display: none;
     }
 
 /* Scrollbar horisontellt */
 
+    .box_3 h2 {
+        margin: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 0px;
+    }
+
     .scroll_wrapper {
-        max-height: 120px;
-        border: 1px solid gray;
+        max-height: 280px;
         display: flex;
         justify-content: space-between;
         overflow-x: scroll;
+        padding: 0px;
+        margin: 10px;
     }
 
     .scroll_wrapper::-webkit-scrollbar {
-        width: 0;
+        height: 10px;
+    }
+
+    .scroll_wrapper::-webkit-scrollbar-track {
+        background: #b8a237;
+    }
+
+    .scroll_wrapper::-webkit-scrollbar-thumb {
+        background:#FAD207;
     }
 
     .scroll_wrapper .item {
-        min-width: 90px;
-        height: 90px;
-        line-height: 110px;
+        height: 240px;
+        line-height: 240px;
         margin-right: 20px;
+        margin-top: 0px;
+    }
+
+    .img-item {
+        width: auto;
+        height: 240px;
     }
 
     
@@ -215,10 +688,10 @@ a:hover {
         'n1' /* Nyheter i olika kategorier på hemsidan */ 
         'b1' /* Bilder från verksamheten på hemsidan */
         'fo';
-        grid-template-rows: 15% 25% 25% 25% 10%;
+        grid-template-rows: 10% 20% 26% 37% 7%;
         grid-template-columns: 100%;
-        height: 95vh;
         gap: 5px;
+        height: 120vh;
     
     }
     
@@ -229,9 +702,8 @@ a:hover {
         's1'
         'a1' /* Information om verksamheten */
         'fo';
-        grid-template-rows: 15% 25% 50% 10%;
+        grid-template-rows: 10% 20% 60% 10%;
         grid-template-columns: 100%;
-        height: 100vh;
         gap: 5px;
     }
     
@@ -243,24 +715,22 @@ a:hover {
         'fo'; 
         grid-template-rows: 15% 75% 10%;
         grid-template-columns: 100%;
-        height: 100vh;
+        height: 97vh;
         gap: 5px;
     }
-    
-    .wrapper_schedule {
+
+    .news_img_wrapper {
         display: grid;
-        grid-template-areas: 
-        'he'
-        'o1' /* Schema för olika dagar och veckor */
-        'fo'
-        ;
-        grid-template-rows: 15% 75% 10%;
         grid-template-columns: 100%;
-        height: 100vh;
+        grid-template-rows: repeat(20%, 5);
         gap: 5px;
     }
 
 /* allmän styling som gäller alla sidor mobil */
+
+    .header #desk_links {
+        display: none;
+    }
 
     .centerimg {
         display: flex;
@@ -282,21 +752,25 @@ a:hover {
         color: #FAD207;
     }
 
-    .header {
-        grid-area: he;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: #0900AD;
-    }
-
     .box_1 {
         grid-area: s1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: #0900AD;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70% 30%;
+        background-color: #000a66;
+        padding: 10px;
+    }
+
+    .box_1 div p {
+        text-align: center;
+        color: white;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .box_1 div h2 {
+        text-align: center;
+        margin: 5px;
     }
 
     .footer {
@@ -304,47 +778,309 @@ a:hover {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        background-color: #0900AD;
+        background-color: #000a66;
+    }
+
+    .footer p {
+        color: white;
     }
 
 /* CSS styling för index.html mobil version */
 
+    #dropdown_h {
+        width: 40px;
+        display: block;
+        position: absolute;
+        left: 550px;
+        right: 20px;
+    }
+
+    #dropbtn_h {
+        border: none;
+        cursor: pointer;
+    }
+
+    #dropbtn_h i.material-icons {
+        color: white;
+        padding-top: 10px;
+    }
+
+    #dropdown-content_h {
+        right: -6px;
+        top: 42px;
+        display: none;
+        position: absolute;
+        background-color: #000a66;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #dropdown_h:hover #dropdown-content_h {
+        display: block;
+    }
+    
+
+    /* Links inside the dropdown */
+    #dropdown-content_h a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    #dropdown-content_h a:hover {
+        background-color: #FAD207;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .wrapper_home .header {
+        grid-area: he;
+        padding: 10px;
+        background-color: #000a66;
+    }
+
+    #logo_home {
+        width: auto;
+        height: 65px;
+        display: block;
+        padding-left: 5px;
+        padding-top: 0px;
+    }
+
+    .wrapper_home .header h2 {
+        margin: 0px;
+        margin-left: 155px;
+        padding-top: 6px;
+        position: absolute;
+    }
+
     .box_2 {
         grid-area: n1;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         gap: 5px;
-        background-color: #0900AD;
+        background-color: #000a66;
     }
 
     .box_2 nav {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        background-color: #0900AD;
+        background-color: #000a66;
+    }
+
+    .box_2 div h3 {
+        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        margin-top: 10px;
     }
 
     .box_3 {
         grid-area: b1;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        background-color: #0900AD;
+        justify-content: center;
+        background-color: #000a66;
+    }
+
+    .list_nav {
+        border-bottom: solid 5px #FAD207 ;
+        padding: 0px;
     }
 
 /* CSS styling för about.html mobil version */
 
+    #dropdown_a {
+        width: 40px;
+        display: block;
+        position: absolute;
+        left: 550px;
+        right: 20px;
+    }
+
+    #dropbtn_a {
+        border: none;
+        cursor: pointer;
+    }
+
+    #dropbtn_a i.material-icons {
+        color: white;
+        padding-top: 7px;
+    }
+
+    #dropdown-content_a {
+        right: -6px;
+        top: 42px;
+        display: none;
+        position: absolute;
+        background-color: #000a66;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #dropdown_a:hover #dropdown-content_a {
+        display: block;
+      }
+      
+    
+    /* Links inside the dropdown */
+    #dropdown-content_a a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    #dropdown-content_a a:hover {
+        background-color: #FAD207;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .wrapper_about .header {
+        grid-area: he;
+        padding: 10px;
+        background-color: #000a66;
+        display: grid;
+        grid-template-columns: 10% 30% 60%;
+        grid-template-rows: 100%;
+    }
+
+    #logo_about {
+        width: auto;
+        height: 65px;
+        display: block;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        margin: 0px;
+        position: relative;
+    }
+
+    #title_about {
+        margin: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        display: block;
+        text-align: left;
+    }
+
     .box_2_scroll {
         grid-area: a1;
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 50% 50%;
-        overflow-x: scroll;
-        background-color: #0900AD;
+        grid-template-rows: repeat(12.5%, 8);
+        grid-template-columns: 100%;
+        overflow-y: scroll;
+        background-color: #000a66;
+    }
+
+    .box_2_scroll div img {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box_2_scroll div {
+        border-bottom: solid 5px white;
+        border-top: solid 5px white;
+        padding: 40px;
+    }
+
+    .box_2_scroll div p {
+        color: #FAD207;
+        text-align: center;
     }
 
 /* CSS styling för news.html mobil version */
+
+    #dropdown_n {
+        width: 40px;
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    #dropbtn_n {
+        border: none;
+        cursor: pointer;
+    }
+
+    #dropbtn_n i.material-icons {
+        color: white;
+        padding-top: 20px;
+    }
+
+    #dropdown-content_n {
+        right: -6px;
+        top: 60px;
+        display: none;
+        position: absolute;
+        background-color: #000a66;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #dropdown_n:hover #dropdown-content_n {
+        display: block;
+    }
+
+
+    /* Links inside the dropdown */
+    #dropdown-content_n a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    #dropdown-content_n a:hover {
+        background-color: #FAD207;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .wrapper_news .header {
+        grid-area: he;
+        padding: 10px;
+        background-color: #000a66;
+        display: grid;
+        grid-template-columns: 10% 30% 60%;
+        grid-template-rows: 100%;
+    }
+
+    #logo_news {
+        width: auto;
+        height: 80px;
+        padding: 0px;
+        padding-right: 15px;
+    }
+    
+    .header .img_title {
+        display: flex;
+        justify-content: left;
+    }
+
+    .news_body nav {
+        padding: 10px;
+    }
 
     .news_body {
         grid-area: n2;
@@ -353,31 +1089,109 @@ a:hover {
         grid-template-rows: 15% repeat(17%, 5);
         gap: 5px;
         overflow-y: scroll;
-        background-color: #0900AD;
+        background-color: #000a66;
     }
 
-    /* CSS styling för schedule.html */
-
-    .schedule {
-        grid-area: o1;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 25% 75%;
-        gap: 5px;
-        background-color: #0900AD;
+    .news_img_wrapper div img {
+        width: 75%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .schedule nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: cornflowerblue;
+    .news_img_wrapper div {
+        border-bottom: solid 5px white;
+        border-top: solid 5px white;
+        padding: 40px;
+    }
+
+    .news_img_wrapper div p {
+        color: #FAD207;
+        text-align: center;
     }
 
     /* CSS styling för login.html */
 
+    #dropdown_l {
+        width: 40px;
+        display: block;
+        position: absolute;
+        left: 540px;
+    }
+
+    #dropbtn_l {
+        border: none;
+        cursor: pointer;
+        padding-top: 30px;
+    }
+
+    #dropbtn_l i.material-icons {
+        color: white;
+    }
+
+    #dropdown-content_l {
+        right: -12px;
+        top: 65px;
+        display: none;
+        position: absolute;
+        background-color: #000a66;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    #dropdown_l:hover #dropdown-content_l {
+        display: block;
+    }
+    
+
+    /* Links inside the dropdown */
+    #dropdown-content_l a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    #dropdown-content_l a:hover {
+        background-color: #FAD207;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .wrapper_login .header {
+        grid-area: he;
+        padding: 10px;
+        background-color: #000a66;
+        display: grid;
+        grid-template-columns: 10% 30% 60%;
+        grid-template-rows: 100%;
+    }
+
+    #logo_login {
+        width: auto;
+        height: 100px;
+        padding: 0px;
+        padding-right: 15px;
+    }
+    
+    .header .img_title {
+        display: flex;
+        justify-content: left;
+    }
+
     #prompt_text {
         height: 100px;
+        margin-bottom: 0px;
+    }
+
+    #prompt_text h2 {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #prompt_text h2 {
@@ -389,18 +1203,103 @@ a:hover {
         width: auto;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 10px;
+        padding-top: 20px;
         padding-bottom: 5px;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
-    /* Login CSS för möbil */
+    /* CSS för schedule.html mobil */
 
-    .login_form {
+    #logo_schedule {
+        padding: 0px;
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+    
+    #måndag {
+        display: inline-block;
+        width: 94vw;
+    }
+
+    #måndag tr td {
+        width: 94vw;
+    }
+
+    #tisdag {
+        display: none;
+        width: 94vw;
+    }
+
+    #tisdag tr td {
+        width: 94vw;
+    }
+
+    #onsdag {
+        display: none;
+        width: 94vw;
+    }
+
+    #onsdag tr td {
+        width: 94vw;
+    }
+
+    #dagar {
+        background-color: #000a66;
+    }
+
+    #dagar p:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #time_table_desktop {
+        grid-area: o1;
+        display: none;
+    }
+
+    #time_table_mobile {
+        grid-area: o1;
+        display: inline-block;
+        background-color: #000a66;
+    }
+
+    table {
+        background-color: #000a66;
+        padding: 25px;
+    }
+    
+    #table_img {
+        width: auto;
+        height: 110px;
+    }
+    
+    td {
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        border-top: solid 5px white;
+        background-color: #000a66;
+        color: #FAD207;
         
     }
+
+    .wrapper_schedule {
+        display: grid;
+        grid-template-areas: 
+        'he'
+        's1'
+        'o1' /* Schema för olika dagar och veckor */
+        'fo'
+        ;
+        grid-template-rows: 12% 20% 58% 10%;
+        grid-template-columns: 100%;
+        height: 140vh;
+        gap: 5px;
+    }
+
+    /* Login CSS för mobil */
 
     .reg_log_container h2 {
         color: #FAD207;
@@ -416,7 +1315,7 @@ a:hover {
 
     .reg_log_container {
         grid-area: l1;
-        background-color: #0900AD;
+        background-color: #000a66;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -464,10 +1363,6 @@ a:hover {
         opacity:1;
     }
     
-    /* Add a blue text color to links */
-    a {
-        color: dodgerblue;
-    }
     
     /* Set a grey background color and center the text of the "sign in" section */
     .signin {
